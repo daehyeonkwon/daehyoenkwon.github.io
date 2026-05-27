@@ -1,0 +1,398 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>맛.ZIP - 나만의 맛집 큐레이션</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        body {
+            font-family: "맑은 고딕", "돋움", sans-serif;
+            font-size: 100%;
+            background-color: #FFF9F5;
+            color: #333;
+        }
+
+ 
+        [class*="c_"] {
+            float: left;
+            padding: 10px;
+            width: 100%;
+        }
+
+   
+        @media only screen and (min-width: 600px) {
+            .c_m_1 {
+                width: 8.33%;
+            }
+
+            .c_m_2 {
+                width: 16.66%;
+            }
+
+            .c_m_3 {
+                width: 25%;
+            }
+
+            .c_m_4 {
+                width: 33.33%;
+            }
+
+            .c_m_5 {
+                width: 41.66%;
+            }
+
+            .c_m_6 {
+                width: 50%;
+            }
+
+            .c_m_7 {
+                width: 58.33%;
+            }
+
+            .c_m_8 {
+                width: 66.66%;
+            }
+
+            .c_m_9 {
+                width: 75%;
+            }
+
+            .c_m_10 {
+                width: 83.33%;
+            }
+
+            .c_m_11 {
+                width: 91.66%;
+            }
+
+            .c_m_12 {
+                width: 100%;
+            }
+        }
+
+      
+        @media only screen and (min-width: 768px) {
+            .c_1 {
+                width: 8.33%;
+            }
+
+            .c_2 {
+                width: 16.66%;
+            }
+
+            .c_3 {
+                width: 25%;
+            }
+
+            .c_4 {
+                width: 33.33%;
+            }
+
+            .c_5 {
+                width: 41.66%;
+            }
+
+            .c_6 {
+                width: 50%;
+            }
+
+            .c_7 {
+                width: 58.33%;
+            }
+
+            .c_8 {
+                width: 66.66%;
+            }
+
+            .c_9 {
+                width: 75%;
+            }
+
+            .c_10 {
+                width: 83.33%;
+            }
+
+            .c_11 {
+                width: 91.66%;
+            }
+
+            .c_12 {
+                width: 100%;
+            }
+        }
+
+
+        header {
+            padding: 20px 15px;
+            background-color: #fff;
+            overflow: hidden;
+            border-bottom: 2px solid #E54949;
+        }
+
+        .logo {
+            font-size: 2em;
+            font-weight: bold;
+            color: #E54949;
+            text-decoration: none;
+            float: left;
+        }
+
+        .auth-menu {
+            float: right;
+            margin-top: 15px;
+        }
+
+            .auth-menu a {
+                font-size: 0.9em;
+                color: #555;
+                text-decoration: none;
+                margin-left: 10px;
+            }
+
+        nav {
+            background-color: #E54949;
+            text-align: center;
+            clear: both;
+        }
+
+            nav li {
+                display: inline-block;
+            }
+
+            nav a {
+                display: block;
+                padding: 15px 25px;
+                color: #fff;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 1.1em;
+            }
+
+                nav a:hover {
+                    background-color: #C0392B;
+                }
+
+        #wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 10px;
+        }
+
+        .section-title {
+            width: 100%;
+            float: left;
+            text-align: center;
+            margin: 40px 0 15px;
+            font-size: 1.6em;
+            font-weight: bold;
+            color: #222;
+            clear: both;
+        }
+
+       
+        .box {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 10px;
+        }
+
+            .box .img-holder {
+                width: 100%;
+                height: 200px;
+                background-color: #eaeaea;
+                border-radius: 8px;
+                margin-bottom: 15px;
+                overflow: hidden;
+            }
+
+            .box img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .box h3 {
+                color: #333;
+                font-size: 1.2em;
+            }
+
+
+        .brand-section {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 20px 10px;
+            float: left;
+            width: calc(100% - 20px);
+            clear: both;
+        }
+
+            .brand-section h3 {
+                text-align: center;
+                margin-bottom: 20px;
+                font-size: 1.3em;
+                color: #222;
+            }
+
+            .brand-section ul {
+                overflow: hidden;
+            }
+
+            .brand-section li {
+                float: left;
+                width: 33.33%;
+                padding: 10px;
+                text-align: center;
+                font-weight: bold;
+                color: #555;
+            }
+
+
+        @media only screen and (max-width: 600px) {
+            .brand-section li {
+                width: 100%;
+                text-align: left;
+                padding-left: 20px;
+            }
+        }
+
+        footer {
+            background-color: #333;
+            color: #ccc;
+            padding: 30px;
+            text-align: center;
+            clear: both;
+            margin-top: 20px;
+        }
+
+            footer .f-links a {
+                color: #ccc;
+                text-decoration: none;
+                margin: 0 10px;
+                border: 1px solid #777;
+                padding: 5px 10px;
+                font-size: 0.8em;
+                display: inline-block;
+                margin-bottom: 5px;
+            }
+    </style>
+</head>
+<body>
+
+    <header class="c_12">
+        <a href="index.html" class="logo">맛.ZIP</a>
+        <div class="auth-menu">
+            <a href="#">로그인</a> | <a href="#">회원가입</a>
+        </div>
+    </header>
+
+    <nav class="c_12">
+        <ul>
+            <li><a href="menu1.html">핫한맛집</a></li>
+            <li><a href="menu2.html">가격대별</a></li>
+            <li><a href="menu3.html">격식/무드맛집</a></li>
+            <li><a href="menu4.html">나만의맛집</a></li>
+            <li><a href="menu5.html">미식퀘스트</a></li>
+        </ul>
+    </nav>
+
+    <div id="wrap">
+        <h2 class="section-title">음식 종류별</h2>
+        <div class="c_m_4 c_4">
+            <div class="box">
+                <div class="img-holder">
+                    <img src="kfood.jpg" alt="한식">
+                </div>
+                <h3>한식</h3>
+            </div>
+        </div>
+        <div class="c_m_4 c_4">
+            <div class="box">
+                <div class="img-holder">
+                    <img src="cfood.jpg" alt="중식">
+                </div>
+                <h3>중식</h3>
+            </div>
+        </div>
+        <div class="c_m_4 c_4">
+            <div class="box">
+                <div class="img-holder">
+                    <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=500" alt="일식/양식">
+                </div>
+                <h3>일식 / 양식</h3>
+            </div>
+        </div>
+
+        <h2 class="section-title">어디로 가시나요?</h2>
+        <div class="c_m_4 c_4">
+            <div class="box">
+                <div class="img-holder">
+                    <img src="jamsil.jpg" alt="잠실/송파">
+                </div>
+                <h3>잠실 / 송파</h3>
+            </div>
+        </div>
+        <div class="c_m_4 c_4">
+            <div class="box">
+                <div class="img-holder">
+                    <img src="busan.jpg" alt="부산">
+                </div>
+                <h3>부산</h3>
+            </div>
+        </div>
+        <div class="c_m_4 c_4">
+            <div class="box">
+                <div class="img-holder">
+                    <img src="jejudo.jpg" alt="제주도">
+                </div>
+                <h3>제주도</h3>
+            </div>
+        </div>
+
+        <div class="brand-section">
+            <h3>프랜차이즈 및 브랜드 매장</h3>
+            <ul>
+                <li>• VIPS</li>
+                <li>• N서울타워</li>
+                <li>• 연남토마</li>
+                <li>• 엔타스</li>
+                <li>• 마키노차야</li>
+                <li>• 이자카야 우규</li>
+                <li>• 현대그린푸드</li>
+                <li>• 옥소반</li>
+                <li>• 수린</li>
+                <li>• 제일제면소</li>
+                <li>• 부엉이산장</li>
+                <li>• 양산도</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer class="c_12">
+        <div class="f-links">
+            <a href="#">개인정보처리방침</a>
+            <a href="#">서비스이용약관</a>
+            <a href="#">회사관련 정보</a>
+            <a href="#">인스타, 페이스북</a>
+        </div>
+        <p style="margin-top:20px; font-size: 0.8em;">COPYRIGHT(C) 맛.ZIP ALL RIGHTS RESERVED.</p>
+    </footer>
+
+</body>
+</html>
